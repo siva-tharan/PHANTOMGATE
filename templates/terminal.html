@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PHANTOMGATE | Terminal</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="/static/js/app.js" defer></script>
+</head>
+<body data-page="terminal">
+  <header class="topbar">
+    <div class="brand">PHANTOM<span>GATE</span></div>
+    <nav>
+      <a class="active" href="/terminal">Terminal</a>
+      <a href="/explorer">Decoy Files</a>
+      <a href="/trap">Login Trap</a>
+      <a href="/investigation">Investigation</a>
+    </nav>
+    <span class="status">● SIMULATION ACTIVE</span>
+  </header>
+
+  <main class="container">
+    <p class="eyebrow">CYBER DECEPTION ENVIRONMENT / 01</p>
+    <h1>Interactive Terminal</h1>
+    <p class="muted">A controlled, simulated command-line environment.</p>
+
+    <section class="panel terminal-panel">
+      <div class="panel-heading">
+        <span>GUEST@PHANTOMGATE: ~</span>
+        <span class="muted">SIMULATED SHELL</span>
+      </div>
+      <div id="terminal-output" class="terminal-output">
+        <p>PHANTOMGATE SECURITY ENVIRONMENT</p>
+        <p>Simulation initialized. Type <strong>help</strong> to view commands.</p>
+      </div>
+      <form id="command-form" class="command-form">
+        <label for="command-input">guest@phantomgate:~$</label>
+        <input id="command-input" maxlength="120" autocomplete="off"
+               placeholder="Enter simulated command..." required>
+        <button type="submit">EXECUTE</button>
+      </form>
+    </section>
+
+    <p class="notice">This terminal does not execute operating-system commands.</p>
+  </main>
+</body>
+</html>

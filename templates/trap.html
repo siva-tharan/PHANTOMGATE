@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PHANTOMGATE | Login Trap</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="/static/js/app.js" defer></script>
+</head>
+<body data-page="login">
+  <header class="topbar">
+    <div class="brand">PHANTOM<span>GATE</span></div>
+    <nav>
+      <a href="/terminal">Terminal</a>
+      <a href="/explorer">Decoy Files</a>
+      <a class="active" href="/trap">Login Trap</a>
+      <a href="/investigation">Investigation</a>
+    </nav>
+    <span class="status">● SIMULATION ACTIVE</span>
+  </header>
+
+  <main class="container narrow">
+    <p class="eyebrow">DECEPTION MODULE / 03</p>
+    <h1>Decoy Login Portal</h1>
+    <p class="muted">A simulated login interaction for security research.</p>
+
+    <section class="panel login-panel">
+      <div class="brand login-brand">PHANTOM<span>GATE</span></div>
+      <h2>Restricted Access</h2>
+      <p class="muted">Enter a test username to simulate an access attempt.</p>
+
+      <form id="login-form">
+        <label for="username">TEST USERNAME</label>
+        <input id="username" maxlength="80" autocomplete="off"
+               placeholder="Enter test username" required>
+        <button type="submit" class="full-button">SIMULATE LOGIN</button>
+      </form>
+
+      <p id="login-result" class="result"></p>
+      <p class="notice">No password is requested, collected, or stored.</p>
+    </section>
+  </main>
+</body>
+</html>

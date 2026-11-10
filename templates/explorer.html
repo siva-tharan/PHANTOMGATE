@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PHANTOMGATE | Decoy Files</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="/static/js/app.js" defer></script>
+</head>
+<body data-page="explorer">
+  <header class="topbar">
+    <div class="brand">PHANTOM<span>GATE</span></div>
+    <nav>
+      <a href="/terminal">Terminal</a>
+      <a class="active" href="/explorer">Decoy Files</a>
+      <a href="/trap">Login Trap</a>
+      <a href="/investigation">Investigation</a>
+    </nav>
+    <span class="status">● SIMULATION ACTIVE</span>
+  </header>
+
+  <main class="container">
+    <p class="eyebrow">DECEPTION MODULE / 02</p>
+    <h1>Decoy File Explorer</h1>
+    <p class="muted">Select a simulated file to inspect its contents.</p>
+
+    <section class="panel">
+      <div class="panel-heading">/home/guest/documents</div>
+      <div id="file-list" class="file-list">Loading decoy files...</div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">FILE PREVIEW</div>
+      <pre id="file-preview" class="preview">Select a file to view its simulated content.</pre>
+    </section>
+  </main>
+</body>
+</html>

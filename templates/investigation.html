@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHANTOMGATE | Investigation</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body data-page="investigation">
+
+    <header>
+        <h1>PHANTOMGATE</h1>
+        <nav>
+            <a href="/terminal">Terminal</a>
+            <a href="/explorer">File Explorer</a>
+            <a href="/login">Login Trap</a>
+            <a href="/investigation">Investigation</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Intruder Investigation Records</h2>
+        <p>Recorded visitor interactions and threat information.</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Visitor IP</th>
+                        <th>Activity</th>
+                        <th>Input</th>
+                        <th>Browser / User Agent</th>
+                        <th>Severity</th>
+                        <th>Score</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+
+                <tbody id="event-list">
+                    <tr>
+                        <td colspan="8">Loading investigation records...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p id="event-status">Waiting for records...</p>
+    </main>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

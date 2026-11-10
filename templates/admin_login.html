@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PHANTOMGATE | Admin Authentication</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+  <main class="container narrow">
+
+    <p class="eyebrow">SECURE ACCESS / ADMIN MODULE</p>
+
+    <h1>Administrator Login</h1>
+
+    <p class="muted">
+      Authorized investigation personnel only.
+    </p>
+
+    <section class="admin-auth-panel">
+
+      <div class="brand">
+        PHANTOM<span>GATE</span>
+      </div>
+
+      <h2>Restricted Console</h2>
+
+      <p class="muted">
+        Authenticate to access investigation records.
+      </p>
+
+      <form method="POST" action="/admin/login">
+
+        <!-- CSRF Security Token -->
+        <input
+          type="hidden"
+          name="csrf_token"
+          value="{{.CSRFToken}}"
+        >
+
+        <!-- Admin Username -->
+        <label for="username">
+          ADMIN USERNAME
+        </label>
+
+        <input
+          id="username"
+          name="username"
+          type="text"
+          autocomplete="username"
+          maxlength="80"
+          required
+        >
+
+        <!-- Admin Password -->
+        <label for="password">
+          ADMIN PASSWORD
+        </label>
+
+        <input
+          id="password"
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          maxlength="128"
+          required
+        >
+
+        <!-- Login Button -->
+        <button type="submit">
+          AUTHENTICATE
+        </button>
+
+        <!-- Authentication Error -->
+        {{if .Error}}
+          <p class="auth-error">
+            {{.Error}}
+          </p>
+        {{end}}
+
+      </form>
+
+      <p class="admin-notice">
+        Protected administrative access.
+        Visitor decoy login is a separate module.
+      </p>
+
+    </section>
+
+  </main>
+</body>
+</html>
